@@ -25,39 +25,82 @@ If you spot a bug you're welcome to log an issue in the repo and I will take a l
 I've organised my projects by category below:
 
 ## Deep Learning Fundamentals:
-- [jax-basic-neural-network](https://github.com/ChristianOrr/jax-basic-neural-network)
+<details>
+<summary>jax-basic-neural-network</summary>
+
+Repo: [jax-basic-neural-network](https://github.com/ChristianOrr/jax-basic-neural-network)
+
+**Summary:**
+
+This is the most fundamental implementation of deep learning. All the necessary components required to train a neural network are created from scratch. Usually neural networks are created with frameworks like Flax, Pytorch, or Tensorflow, which abstract away most of the information, so its nice to see what neural networks look like when you strip away all the abstraction layers. The MNIST dataset was used as the test bed for this demonstration. All the models achieved higher than 80% accuracy, proving they all worked effectively. 
+
+**If you're new to machine learning, I highly suggest you check this project out!**
+
+
+</details>
 
 ## Computer Vision:
-- [stereo-camera-calibration](https://github.com/ChristianOrr/stereo-camera-calibration)
-- [semi-global-matching-numpy](https://github.com/ChristianOrr/semi-global-matching-numpy)
-- [confidence-measures](https://github.com/ChristianOrr/confidence-measures)
-- [semantic-segmentation](https://github.com/ChristianOrr/semantic-segmentation)
-- [madnet-deep-stereo-with-keras](https://github.com/ChristianOrr/madnet-deep-stereo-with-keras)
+<details>
+<summary>stereo-camera-calibration</summary>
+
+Repo: [stereo-camera-calibration](https://github.com/ChristianOrr/stereo-camera-calibration)
+</details>
+
+<details>
+<summary>semi-global-matching-numpy</summary>
+
+Repo: [semi-global-matching-numpy](https://github.com/ChristianOrr/semi-global-matching-numpy)
+</details>
+
+<details>
+<summary>madnet-deep-stereo-with-keras</summary>
+
+Repo: [madnet-deep-stereo-with-keras](https://github.com/ChristianOrr/madnet-deep-stereo-with-keras)
+</details>
+
+<details>
+<summary>confidence-measures</summary>
+
+Repo: [confidence-measures](https://github.com/ChristianOrr/confidence-measures)
+</details>
+
+<details>
+<summary>semantic-segmentation</summary>
+
+Repo: [semantic-segmentation](https://github.com/ChristianOrr/semantic-segmentation)
+</details>
+
+
+
 
 ## Reinforcement Learning
-- [reinforcement-learning-algorithms](https://github.com/ChristianOrr/reinforcement-learning-algorithms)
+<details>
+<summary>reinforcement-learning-algorithms</summary>
+
+Repo: [reinforcement-learning-algorithms](https://github.com/ChristianOrr/reinforcement-learning-algorithms)
+
+
+</details>
+
 
 ## Large Language Models
-- [transformers](https://github.com/ChristianOrr/transformers)
+<details>
+<summary>transformers</summary>
+
+Repo: [transformers](https://github.com/ChristianOrr/transformers)
+</details>
+
 
 ## Explainable AI
-- [feature-attribution-methods-jax](https://github.com/ChristianOrr/feature-attribution-methods-jax)
+<details>
+<summary>feature-attribution-methods-jax</summary>
+
+Repo: [feature-attribution-methods-jax](https://github.com/ChristianOrr/feature-attribution-methods-jax)
+</details>
 
 ## Sequential Models
-- [sequential-ft-transformer](https://github.com/ChristianOrr/sequential-ft-transformer)
+<details>
+<summary>sequential-ft-transformer</summary>
 
-
-<!--
-**ChristianOrr/ChristianOrr** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Repo: [sequential-ft-transformer](https://github.com/ChristianOrr/sequential-ft-transformer)
+</details>
