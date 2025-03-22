@@ -30,7 +30,7 @@ I've organised my projects by category below:
 
 Repo: [jax-basic-neural-network](https://github.com/ChristianOrr/jax-basic-neural-network)
 
-**Summary:**
+### Summary:
 
 This is the most fundamental implementation of deep learning. All the necessary components required to train a neural network are created from scratch. Usually neural networks are created with frameworks like Flax, Pytorch, or Tensorflow, which abstract away most of the information, so its nice to see what neural networks look like when you strip away all the abstraction layers. The MNIST dataset was used as the test bed for this demonstration. All the models achieved higher than 80% accuracy, proving they all worked effectively. 
 
@@ -50,6 +50,31 @@ Repo: [stereo-camera-calibration](https://github.com/ChristianOrr/stereo-camera-
 <summary>semi-global-matching-numpy</summary>
 
 Repo: [semi-global-matching-numpy](https://github.com/ChristianOrr/semi-global-matching-numpy)
+
+### Summary:
+SGM is a popular classic depth estimation algorithm, known for having good accuracy and speed. Newer stereo depth estimation models like [madnet-deep-stereo-with-keras](https://github.com/ChristianOrr/madnet-deep-stereo-with-keras) have much higher accuracy, but need to be trained first and require more compute during inference. This makes SGM and excellent option for resource constrained situations.
+
+### SGM Transformation Process
+The SGM algorithm follows the following process to achieve the depth estimation prediction.
+
+1. The SGM process starts with a pair of rectified stereo images. 
+![left_right_colour](sgm/left_right_colour.png)
+2. The stereo pair is converted to grayscale.
+![left_right_grey](sgm/left_right_grey.png)
+3. A Gaussian blur filter is applied to smooth the images.
+![left_right_blur](sgm/left_right_blur.png)
+4. The census transform is then applied to the images.
+![left_right_census](sgm/left_right_census.png)
+5. The Hamming distance is applied to the census values to calculate the cost volume.
+![left_right_cost_volume](sgm/left_right_cost_volume.png)
+6. A cost aggregation technique is applied to remove the noise from the cost volume.
+![left_right_cost_agg](sgm/left_right_cost_agg.png)
+7. A median blur filter is applied to remove the streaking.
+![left_right_disp](sgm/left_right_disp.png)
+8. **Optional:** The disparity can then be converted to colour to see the depth better. Red indicates closer and blue further away.
+![left_right_depth_map](sgm/left_right_depth_map.png)
+
+
 </details>
 
 <details>
