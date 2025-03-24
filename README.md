@@ -44,6 +44,9 @@ This is the most fundamental implementation of deep learning. All the necessary 
 <summary>stereo-camera-calibration</summary>
 
 Repo: [stereo-camera-calibration](https://github.com/ChristianOrr/stereo-camera-calibration)
+
+### Summary:
+Stereo camera calibration is performed to remove distortion and rectify the stereo images. Distortion is present in all cameras to some extent, but it is most extreme in fish eye lenses. Rectification ensures the cameras are pointing in the same direction. Stereo depth algorithms use cross-correspondence to estimate depth, which relies on the cameras pointing in the same direction. Stereo camera calibration is a precursor to depth estimation. The depth estimation accuracy will depend on the calibration. It is essential to get the calibration right if you want good depth estimation performance.
 </details>
 
 <details>
