@@ -96,8 +96,6 @@ Repo: [semantic-segmentation](https://github.com/ChristianOrr/semantic-segmentat
 </details>
 
 
-
-
 ## Reinforcement Learning
 <details>
 <summary>reinforcement-learning-algorithms</summary>
@@ -107,15 +105,6 @@ Repo: [reinforcement-learning-algorithms](https://github.com/ChristianOrr/reinfo
 
 </details>
 
-
-## Large Language Models
-<details>
-<summary>transformers</summary>
-
-Repo: [transformers](https://github.com/ChristianOrr/transformers)
-</details>
-
-
 ## Explainable AI
 <details>
 <summary>feature-attribution-methods-jax</summary>
@@ -124,6 +113,12 @@ Repo: [feature-attribution-methods-jax](https://github.com/ChristianOrr/feature-
 </details>
 
 ## Sequential Models
+<details>
+<summary>transformers</summary>
+
+Repo: [transformers](https://github.com/ChristianOrr/transformers)
+</details>
+
 <details>
 <summary>sequential-ft-transformer</summary>
 
