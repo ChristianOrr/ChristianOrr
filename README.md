@@ -84,6 +84,13 @@ The SGM algorithm follows the following process to achieve the depth estimation 
 <summary>madnet-deep-stereo-with-keras</summary>
 
 Repo: [madnet-deep-stereo-with-keras](https://github.com/ChristianOrr/madnet-deep-stereo-with-keras)
+
+### Summary:
+MADNet is an advanced deep learning stereo depth estimation model. It combines a novel self-supervised learning algorithm called MAD, which provides the ability to perform online adaptation.
+
+### MAD Adaptation
+The image below shows the depth maps of MADNet using different adaptation methods. The model was initially trained on Flyingthings-3D. Starting from the right column we have the base model labeled "No Adaptation". Then we have MAD adatpation, which adapts 1 module randomly. Then Full MAD updates all 6 modules. Pretrained Kitti is trained on the ground truth depth maps. Pretrained is obviously the best performing because it has been trained on the answers, but the MAD adaptation methods are not far behind.
+![madnet_adaptation](madnet/adaptation_results.png)
 </details>
 
 <details>
