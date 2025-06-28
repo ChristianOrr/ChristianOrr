@@ -60,21 +60,36 @@ SGM is a popular classic depth estimation algorithm, known for having good accur
 ### SGM Transformation Process
 The SGM algorithm follows the following process to achieve the depth estimation prediction.
 
-1. The SGM process starts with a pair of rectified stereo images. 
+1. The SGM process starts with a pair of rectified stereo images.
+
 ![left_right_colour](sgm/left_right_colour.png)
+
 2. The stereo pair is converted to grayscale.
+
 ![left_right_grey](sgm/left_right_grey.png)
+
 3. A Gaussian blur filter is applied to smooth the images.
+
 ![left_right_blur](sgm/left_right_blur.png)
+
 4. The census transform is then applied to the images.
+
 ![left_right_census](sgm/left_right_census.png)
+
 5. The Hamming distance is applied to the census values to calculate the cost volume.
+
 ![left_right_cost_volume](sgm/left_right_cost_volume.png)
+
 6. A cost aggregation technique is applied to remove the noise from the cost volume.
+
 ![left_right_cost_agg](sgm/left_right_cost_agg.png)
+
 7. A median blur filter is applied to remove the streaking.
+
 ![left_right_disp](sgm/left_right_disp.png)
+
 8. **Optional:** The disparity can then be converted to colour to see the depth better. Red indicates closer and blue further away.
+
 ![left_right_depth_map](sgm/left_right_depth_map.png)
 
 
@@ -97,6 +112,39 @@ The image below shows the depth maps of MADNet using different adaptation method
 <summary>confidence-measures</summary>
 
 Repo: [confidence-measures](https://github.com/ChristianOrr/confidence-measures)
+
+## Confidence Estimation Process
+Each step shows the general process followed for each confidence estimation algorithm. I'm using the MSM confidence measure and SGM depth estimator for this example. 
+
+
+1. Get Undistorted and Rectified Stereo Images
+
+![left_right_colour](teddy/left_right_colour.png)
+
+2. The stereo pair is converted to grayscale.
+
+![left_right_grey](teddy/left_right_grey.png)
+
+3. The depth map is calculated using the stereo algothithm. There will be multiple steps in this process, which will vary depending on the stereo algorithm used.
+
+![left_right_depth_map](teddy/left_right_depth_map.png)
+
+4. The confidence map is calculated from the depth map. Dark blue represents low confidence and light green represents high confidence.
+
+![left_right_conf](teddy/left_right_conf.png)
+
+5. **Testing phase only:** The confidence map is tested by checking if the pixels with low confidence correspond to an incorrect disparity prediction by comparing the predicted depth map with the ground truth shown below.
+
+![left_right_gt](teddy/left_right_gt.png)
+
+6. **Testing phase only:** To measure the accuracy of the confidence estimation algorithm we plot the ROC curve for the error rates shown below. The curve initially decreases before increasing, this indicates that the errors at the highest confidence levels are actually higher than at lower confidence levels. The lowest error rates are at about 70% density. This tells us how much data we need to filter out to achieve the lowest error rates. 
+
+![left_right_roc_error](teddy/left_right_roc_error.png)
+
+7. **Testing phase only:** For comparison heres what the optimal ROC error curve looks like. The optimal ROC Curve is based on the hypothetical situation where the confidence measure correctly identifies all incorrect disparities with low confidence and all correct matches with high confidence. This results in a monotonically increasing curve.
+
+![left_right_opt_roc](teddy/left_right_opt_roc.png)
+
 </details>
 
 <details>
